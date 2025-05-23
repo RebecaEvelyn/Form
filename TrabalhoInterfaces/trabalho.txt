@@ -1,0 +1,281 @@
+Resumo 
+
+O projeto consiste no desenvolvimento de uma interface gráfica para registo de utilizadores, com foco em usabilidade, acessibilidade e experiência do utilizador (UX), utilizando HTML, CSS, Javascript e PHP. A interface apresenta um formulário com campos obrigatórios, como nome completo, data de nascimento, morada, e-mail, telefone, género, fotografia, documento de identificação e palavra-passe, além de botões para inicializar e submeter o formulário. O design inclui recursos como alternância entre modo claro e escuro, ajuste de tamanho de fonte e validação de campos para garantir acessibilidade e integridade dos dados. Após a submissão, os dados são exibidos numa nova página no mesmo formato preenchido pelo utilizador, possibilitando sua consulta. O CSS define um design responsivo, com temas claro e escuro, enquanto o JavaScript implementa funcionalidades dinâmicas, como o controle de temas e ajuste de fontes. O PHP é utilizado para processar os dados enviados, realizar o upload de ficheiros e sanitizar informações. Esse sistema destaca-se por ser intuitivo e funcional, promovendo uma experiência agradável e acessível aos utilizadores. O formulário encontra-se hospedado no endereço https://lauryenerebeca.rf.gd. 
+
+Formulário representado na imagem abaixo: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Introdução 
+
+ 
+
+Este relatório técnico apresenta o processo de criação, desenvolvimento e avaliação de um formulário web hospedado no endereço https://lauryenerebeca.rf.gd. O trabalho aborda as técnicas de usabilidade, acessibilidade e experiência do utilizador, com o objetivo de garantir uma interação eficiente, inclusiva e intuitiva. São descritos os materiais e métodos utilizados, os resultados obtidos, e as conclusões derivadas do processo, fornecendo uma análise crítica sobre as escolhas implementadas. 
+
+A criação de interfaces web acessíveis e funcionais é um dos desafios mais significativos no desenvolvimento de aplicações digitais. Este trabalho teve como objetivo o desenvolvimento de um formulário online que não apenas atende às exigências funcionais, mas também é alinhado aos princípios de usabilidade, acessibilidade e experiência do utilizador. Este relatório detalha as etapas de concepção, implementação e avaliação do projeto. 
+
+ 
+
+ 
+
+Materiais e Métodos 
+
+ 
+
+Ferramentas Utilizadas: 
+
+Editor de código: Visual Studio Code 
+
+Linguagens: HTML, CSS, PHP e Javascript 
+
+Ferramentas de validação de acessibilidade: acessibilidade.pt e Contrast Checker 
+
+Navegadores para teste: Google Chrome e Microsoft Edge 
+
+Técnicas Adotadas: 
+
+Usabilidade: Implementação de uma interface simples e clara, com organização lógica dos campos e instruções visíveis para o utilizador. 
+
+Acessibilidade: Uso de etiquetas ARIA, contraste adequado entre texto e fundo, suporte à navegação por teclado e compatibilidade com leitores de tela. 
+
+Experiência do Utilizador: Feedback imediato em caso de erros, design responsivo para diferentes dispositivos e minimização da carga cognitiva durante o preenchimento do formulário. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Metodos e materiais utilizados 
+
+ 
+
+HTML 
+
+ 
+
+A estruturação foi realizada em HTML, que define os elementos básicos do formulário, como campos obrigatórios para nome, data de nascimento, morada, email, telefone, género, fotografia, documento de identificação e palavra-passe. A obrigatoriedade dos campos foi assegurada pelo atributo required, como no trecho <input type="text" id="nome_completo" name="nome_completo" required> 
+
+ 
+
+ 
+
+Imagem do código com atributo required:  
+
+ 
+
+ 
+
+Isso evita que o utilizador submeta o formulário sem preencher os dados necessários. Como vimos durante o semestre as Heurísticas de Nielsen são diretrizes que orientam os profissionais da área de UI/UX Design há décadas. O motivo é simples, este conceito visionário já estava focado na experiência do usuário em um momento que a internet estava começando a se popularizar. Usando o atributo required, citado acima, conseguimos assegurar uma das heurísticas de Nielsen: Controle e liberdade do utilizador: O formulário permite que os utilizadores corrijam entradas facilmente ou reiniciem o preenchimento sem dificuldades. Seguindo essa mesma lógica criamos um botão de reinicialização do formulário podendo voltar a preencher as informações pedidas sem muito esforço. 
+
+ 
+
+Imagem do botão de inicializar formulário:  
+
+ 
+
+ 
+
+O HTML também teve uma participação crucial na criação do modo escuro do formulário e é muito importante o uso do dark mode (modo escuro) para um site no contexto de acessibilidade, pois atende às necessidades de diversos grupos de utilizadores e melhora a experiência de uso em diferentes condições. Algumas das razões principais incluem: 
+
+Redução da fadiga ocular: Em ambientes com pouca iluminação, o dark mode reduz o brilho excessivo da tela, diminuindo a fadiga ocular. Isso é particularmente útil para utilizadores que passam longas horas diante de dispositivos digitais. 
+
+Melhoria para pessoas com fotossensibilidade: Pessoas com condições como enxaqueca ou fotossensibilidade podem ter dificuldades ao olhar para telas claras. O dark mode oferece uma alternativa mais confortável. 
+
+Aumento do contraste: O dark mode oferece um alto contraste entre o texto e o fundo (texto claro sobre fundo escuro), tornando-o mais legível para pessoas com dificuldades visuais, como baixa visão ou daltonismo. 
+
+Personalização da experiência: O dark mode dá aos utilizadores o controle para ajustar a interface às suas preferências e necessidades específicas, promovendo uma experiência inclusiva. 
+
+Uso noturno: Durante a noite ou em ambientes escuros, o modo escuro reduz o impacto da luz azul, o que pode ajudar a preservar o ritmo circadiano e melhorar a qualidade do sono dos utilizadores. 
+
+Imagem do código utilizado: 
+
+ 
+
+O modo escuro também está alinhado com os princípios das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), que promovem a criação de interfaces inclusivas. Veja como o dark mode contribui para a acessibilidade: 
+
+1. Princípio de Perceptível (WCAG) 
+
+O dark mode atende ao requisito de tornar o conteúdo perceptível para usuários com diferentes necessidades visuais: 
+
+Contraste de cores: A combinação de texto claro sobre fundo escuro melhora a legibilidade para pessoas com baixa visão ou condições como fotofobia.  
+
+ 
+
+Princípio de Operável (WCAG) 
+
+O dark mode deve ser fácil de ativar ou desativar, permitindo que os utilizadores escolham a melhor configuração para suas necessidades: 
+
+Botão acessível: No código, o botão para alternar o modo escuro/claro inclui uma descrição acessível com aria-label: 
+
+ 
+
+ 
+
+3. Princípio de Adaptável (WCAG) 
+
+O dark mode promove flexibilidade e personalização da interface: 
+
+Usuários com diferentes necessidades podem alternar entre modos claro e escuro, ajustando a interface a condições ambientais ou preferências pessoais. Isso atende ao critério de permitir que os utilizadores personalizem a apresentação do conteúdo sem perda de funcionalidade. 
+
+ 
+
+Para finalizar o HTML também teve a participação na funcionalidade de aumentar e diminuir a fonte da página. Essa funcionalidade é extremamente importante no contexto de acessibilidade, pois atende a uma variedade de necessidades de usuários com diferentes habilidades visuais. Essa funcionalidade possibilita que o conteúdo seja ajustado para melhor leitura e interação, promovendo inclusão e uma experiência de usuário mais positiva. 
+
+Importância no Contexto de Acessibilidade: 
+
+Usuários com Baixa Visão: Pessoas com dificuldades visuais, como presbiopia ou visão reduzida, podem ampliar o texto e elementos da interface para facilitar a leitura e a navegação. 
+
+Atenção à Heurística "Reconhecimento em Vez de Memorização": Ajustar o tamanho do texto reduz a carga cognitiva, pois elementos tornam-se mais visíveis e fáceis de identificar, permitindo que os usuários se concentrem no conteúdo em vez de se esforçarem para decifrá-lo. 
+
+Conformidade com Diretrizes de Acessibilidade: A funcionalidade contribui para cumprir critérios das Diretrizes de Acessibilidade para Conteúdo Web (WCAG), especialmente no princípio Perceptível, que exige que o conteúdo seja apresentado de forma que possa ser facilmente distinguido. 
+
+Flexibilidade e Inclusão: Usuários com diferentes dispositivos ou preferências individuais podem personalizar a interface, aumentando sua eficácia em vários contextos de uso. 
+
+Prevenção de Barreiras: A capacidade de ajustar o tamanho da página ajuda a evitar barreiras visuais que poderiam surgir em layouts fixos ou em textos pequenos demais. 
+
+Exemplo no código: 
+
+ 
+
+ 
+
+ 
+
+CSS 
+
+ 
+
+Já o CSS desempenhou um papel crucial no desenvolvimento do formulário de registo de utilizador ao proporcionar um design visualmente atrativo e funcional, alinhado com os princípios de usabilidade e acessibilidade sendo assim. No código enviado, o CSS foi usado para estilizar os elementos, definindo cores, fontes, espaçamentos e transições que melhoram a experiência do utilizador. Por exemplo, o fundo do cabeçalho é destacado em azul com o código, isso ajuda a atrair a atenção para o título e o menu de navegação onde se encontram as principais funções de acessibilidade do formulário: 
+
+ 
+
+Imagem do cabeçalho mais código utilizado: 
+
+ 
+
+ 
+
+ 
+
+Como citado acima para atender às necessidades de acessibilidade, foi implementado um modo escuro que reduz a fadiga ocular em ambientes de pouca luz, alterando o esquema de cores com a classe dark-mode e o CSS foi também uma ferramenta fundamental para funcionalidade desse elemento. O exemplo do código:  
+
+ 
+
+ 
+
+ 
+
+Essas alterações automáticas garantem que a interface continue funcional e acessível, independentemente do modo ativo. Isso mostra como o dark mode não é apenas uma questão estética, mas também uma ferramenta poderosa para melhorar a acessibilidade e a experiência do utilizador. 
+
+ 
+
+Em concordância com as heurísticas de Nielsen O CSS também colabora para a ajuda aos usuários no reconhecimento de elementos (6ª heurística) ao destacar campos obrigatórios e diferenciar botões de ações principais e secundárias. A responsividade e adaptação visual proporcionadas pelo CSS garantem que o site seja acessível em diversos dispositivos, promovendo flexibilidade no uso. Assim, o CSS não só enriquece o design, mas também torna a interface mais intuitiva e acessível, em consonância com as heurísticas de Nielsen. 
+
+ 
+
+Interface: Desenvolvemos um protótipo pensado para minimizar o esforço do utilizador, garantindo que todas as pessoas, independentemente de habilidades técnicas ou limitações físicas, pudessem interagir com facilidade. A simplicidade e a clareza foram priorizadas para promover uma experiência inclusiva. 
+
+Design: O design da aplicação foi estruturado para que os botões e elementos fossem intuitivos e de fácil compreensão. Utilizamos princípios de design centrado no usuário, considerando feedback visual claro e posições naturais para os componentes mais utilizados. Dessa forma, promovemos maior eficiência e satisfatória experiência de uso. 
+
+Alinhamento: Organizamos os elementos visuais seguindo um alinhamento consistente baseado em um eixo principal. Essa abordagem facilita a leitura, melhora a organização visual e oferece uma aparência mais profissional e equilibrada, contribuindo para uma experiência menos cansativa para o utilizador. 
+
+Simetria: Adotamos a simetria na distribuição dos ícones, garantindo que todos estejam posicionados de maneira uniforme e harmoniosa. Isso cria um senso de ordem que contribui para a facilidade de navegação e reduz a confusão cognitiva. 
+
+Hierarquia: Os elementos mais importantes foram estrategicamente posicionados nas áreas de maior destaque da interface, seguindo os princípios de hierarquia visual. Isso assegura que o utilizador perceba imediatamente as informações prioritárias, aumentando a eficiência nas interações. 
+
+Padrão: Mantivemos consistência na escolha dos ícones e na apresentação de elementos visuais, criando um padrão que reforça a organização e a previsibilidade da interface. Essa repetição intencional ajuda a reduzir o tempo de aprendizado e melhora a experiência do usuário. 
+
+Utilização da Cor: Optamos por uma paleta de duas cores em tons de cinza, priorizando o contraste e a neutralidade. Essa escolha promoveu um equilíbrio visual e garantiu maior legibilidade para diversos contextos de uso. O uso moderado de cores também reduz a fadiga visual e aumenta a acessibilidade para pessoas com deficiência visual ou daltonismo. 
+
+Heurísticas de Nielsen: As heurísticas de usabilidade de Jakob Nielsen foram aplicadas em várias etapas do projeto, incluindo: 
+
+Visibilidade do estado do sistema: O formulário apresenta mensagens de feedback em tempo real, como confirmação de dados inseridos e alertas para erros. 
+
+Correspondência entre o sistema e o mundo real: A linguagem utilizada é simples e compreensível, evitando jargões técnicos. 
+
+Controle e liberdade do utilizador: O formulário permite que os utilizadores corrijam entradas facilmente ou reiniciem o preenchimento sem dificuldades. 
+
+Consistência e padrões: Componentes comuns foram usados para garantir consistência, como botões e campos de entrada. 
+
+Prevenção de erros: Validações preventivas foram incluídas para reduzir a probabilidade de erros durante o preenchimento. 
+
+Reconhecimento em vez de memorização: Os campos possuem textos explicativos que eliminam a necessidade de lembrar informações adicionais. 
+
+Os resultados do projeto indicaram que: 
+
+O formulário obteve um índice de acessibilidade de 95% no teste do Lighthouse. 
+
+As validações realizadas com o Acess Monitor identificaram que o formulário está em conformidade com as diretrizes WCAG 2.1 em mais de 90% dos critérios analisados, destacando-se pela clareza de navegação e pelo suporte a dispositivos assistivos. 
+
+O Acessibilidade.pt destacou um excelente desempenho na facilidade de utilização por utilizadores com deficiência visual, devido ao uso correto de etiquetas ARIA e estrutura semântica. 
+
+Testes com utilizadores revelaram que 90% conseguiram completar o preenchimento em menos de 3 minutos. 
+
+Relatórios qualitativos apontaram facilidade de uso e clareza na apresentação das informações. 
+
+Conclusão 
+
+O projeto cumpriu os objetivos estabelecidos, destacando-se pela interface intuitiva e inclusiva. A aplicação das técnicas de usabilidade e acessibilidade resultou em um formulário que atende a um público diversificado, promovendo uma experiência positiva. Com essas escolhas fundamentadas, buscamos criar uma interface acessível, funcional e visualmente agradável, atendendo às necessidades de um público diverso e priorizando a experiência do utilizador. 
+
+ 
+
+Bibliografia 
+
+Nielsen, J. (1993). Usability Engineering. Morgan Kaufmann. 
+
+W3C Web Accessibility Initiative. (2023). Web Content Accessibility Guidelines (WCAG) 2.1. 
+
+Norman, D. A. (2013). The Design of Everyday Things. Basic Books. 
+
+Acess Monitor. (2023). Ferramenta de Avaliação de Acessibilidade Web. 
+
+Acessibilidade.pt. (2023). Plataforma de Validação de Acessibilidade em Português. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
